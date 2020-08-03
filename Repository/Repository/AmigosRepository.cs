@@ -31,7 +31,7 @@ namespace Repository.Repository
         {
             var amigo = new Amigos();
             amigo.Idenvia = envia;
-            amigo.Idenvia = recibe;
+            amigo.Idrecibe = recibe;
 
             _context.Set<Amigos>().Add(amigo);
             await _context.SaveChangesAsync();

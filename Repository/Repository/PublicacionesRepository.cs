@@ -262,12 +262,12 @@ namespace Repository.Repository
             return listfriends;
         }
 
-        public async Task<bool> TweetApi(NewPubDTO vms)
+        public async Task<bool> TweetApi(NewPubDTO vms, string iduser)
         {
             var pub = new Publicaciones();
             pub.Imagen = vms.Imagen;
             pub.Contenido = vms.Contenido;
-            pub.Idusuario = vms.iduser;
+            pub.Idusuario = iduser;
             pub.Fecha = DateTime.Now;
             _context.Publicaciones.Add(pub);
             await _context.SaveChangesAsync();

@@ -14,7 +14,6 @@ namespace DTOS
         [Required(ErrorMessage = "El contenido es requerida")]
 
         public string Contenido { get; set; }
-        public string iduser{ get; set; }
         public string Imagen { get; set; }
 
 

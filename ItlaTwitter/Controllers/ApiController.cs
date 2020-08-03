@@ -144,8 +144,7 @@ namespace ItlaTwitter.Controllers
 
                     if (resul.Result.Succeeded)
                     {
-                        vm.iduser = user.Id;
-                        await _PublicacionesRepository.TweetApi(vm);
+                        await _PublicacionesRepository.TweetApi(vm, user.Id);
                         return NoContent();
                     }
                     else
