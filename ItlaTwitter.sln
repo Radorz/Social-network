@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItlaTwitter", "ItlaTwitter\ItlaTwitter.csproj", "{BDD80A6D-BA8A-4CF6-97C8-A1B8E9E04D21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailHandler", "EmailHandler\EmailHandler.csproj", "{92B3D3E4-FE98-48E1-92E9-7EF07FD97EE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Database", "Database\Database.csproj", "{AEE93553-0C00-42A0-98EE-B9084FBE727B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViewModels", "ViewModels\ViewModels.csproj", "{927342EB-753C-40D3-9869-53C9BB61A61A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{4AFD4D6A-9A9A-488E-93CC-0E25F2AC6951}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dto", "API\dto.csproj", "{1315E25A-3225-4E6B-B7D1-77BC1BF64CDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIv1", "APIv1\APIv1.csproj", "{8E8A8C9E-011B-4B0D-8220-4A7D40DD237B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDD80A6D-BA8A-4CF6-97C8-A1B8E9E04D21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD80A6D-BA8A-4CF6-97C8-A1B8E9E04D21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD80A6D-BA8A-4CF6-97C8-A1B8E9E04D21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD80A6D-BA8A-4CF6-97C8-A1B8E9E04D21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B3D3E4-FE98-48E1-92E9-7EF07FD97EE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B3D3E4-FE98-48E1-92E9-7EF07FD97EE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B3D3E4-FE98-48E1-92E9-7EF07FD97EE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B3D3E4-FE98-48E1-92E9-7EF07FD97EE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE93553-0C00-42A0-98EE-B9084FBE727B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE93553-0C00-42A0-98EE-B9084FBE727B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE93553-0C00-42A0-98EE-B9084FBE727B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE93553-0C00-42A0-98EE-B9084FBE727B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{927342EB-753C-40D3-9869-53C9BB61A61A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{927342EB-753C-40D3-9869-53C9BB61A61A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{927342EB-753C-40D3-9869-53C9BB61A61A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{927342EB-753C-40D3-9869-53C9BB61A61A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AFD4D6A-9A9A-488E-93CC-0E25F2AC6951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AFD4D6A-9A9A-488E-93CC-0E25F2AC6951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AFD4D6A-9A9A-488E-93CC-0E25F2AC6951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AFD4D6A-9A9A-488E-93CC-0E25F2AC6951}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1315E25A-3225-4E6B-B7D1-77BC1BF64CDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1315E25A-3225-4E6B-B7D1-77BC1BF64CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1315E25A-3225-4E6B-B7D1-77BC1BF64CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1315E25A-3225-4E6B-B7D1-77BC1BF64CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8A8C9E-011B-4B0D-8220-4A7D40DD237B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8A8C9E-011B-4B0D-8220-4A7D40DD237B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8A8C9E-011B-4B0D-8220-4A7D40DD237B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8A8C9E-011B-4B0D-8220-4A7D40DD237B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72C6805E-935B-4893-A73A-B7A718F30074}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,296 @@
+﻿@model ViewModels.ViewModels.AmigosViewModel
+
+@{
+    ViewData["Title"] = "Amigos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card float-right text-center" style="width:25em">
+    <div class="card-header ">
+        <h5 class="card-title">Listado de Amigos <a href="" data-toggle="modal" data-target="#AñadirAmigos" class="btn btn-success ">Añadir Amigos</a></h5>
+
+    </div>
+    <div class="modal fade" id="AñadirAmigos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <form method="post" asp-action="AñadirA">
+
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="AñadirAmigos">Añadir Amigo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <p>Ingresa Nombre de Usuario</p>
+                            <input asp-for="Añadiruser" type="text" />
+                            <input asp-for="idusuario" value="@Model.idusuario" type="hidden" />
+                            <div class="text-center">
+                                <span asp-validation-for="Añadiruser" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" >Añadir</button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <table>
+
+        <tbody>
+            @foreach (var item in Model.Amigos)
+            {
+                <tr>
+                    <td>
+                      
+                        <div class="card-body">
+                            <div class="float-left">
+                                @{ var photoprofilefriend = "~/img/profile/" + (!string.IsNullOrEmpty(item.Foto) ? item.Foto : "profile-placeholder.png");}
+                                <img src="@photoprofilefriend" asp-append-version="true"
+                                     class="rounded-circle z-depth-1-half mr-1" alt="example placeholder" style="width: 50px;height:50px; ">
+                            </div>
+                            <h5 class="card-title">@item.Nombre.Trim() @item.Apellido.Trim()</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">
+                                @@@item.Usuario
+                            </h6>
+                        </div>
+                    </td>
+
+                    <td class="align-content-center">
+                        <a class="btn btn-light rounded-pill" data-toggle="modal" data-target="#exampleModal2" data-id="@item.Id">Delete</a>
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <form method="post" asp-action="BorrarAmix">
+
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Borrar Publicacion</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="form-group">
+                                                <p>¿Estas seguro que quieres borrar este amigo?</p>
+                                                <input asp-for="idusuario" type="hidden" value="@Model.idusuario" />
+                                                <input class="hola" asp-for="BorrarAmix" type="hidden" />
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                            <button type="submit" class="btn btn-primary" >Borrar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+
+</div>
+@if (Model.Amigos.Count == 0)
+{
+    <h4>No tienes Amigos agregados, Añade uno para ver sus publicaciones!</h4>
+}
+@{int i = 0;
+    int a = 0; }
+@foreach (var item in Model.publicacion)
+{
+
+
+    <div class="mt-3ml-lg-5 mb-3" style="align-content:flex-start; margin-left:5em;">
+        <div class="card text-left" style="width: 35rem;">
+            <div class="card-body">
+                <div style="display:inline-block; width:25rem">
+                    <div class="float-left mr-2">
+                        @{ var photoprofile = "~/img/profile/" + (!string.IsNullOrEmpty(item.Foto) ? item.Foto : "profile-placeholder.png");}
+                        <img src="@photoprofile" asp-append-version="true"
+                             class="rounded-circle z-depth-1-half mr-1" alt="example placeholder" style="width: 50px;height:50px; ">
+                    </div>
+                    <h5 class="card-title text-primary">@item.Nombre.Trim() @item.Apellido.Trim()</h5>
+
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        @@@item.Usuario · @item.Fecha.ToString(" dd MMM hh:mm tt")
+                    </h6>
+                </div>
+
+                <p>@item.Contenido</p>
+                @if (!string.IsNullOrEmpty(item.Imagen))
+                {
+
+                    var photopathpub = "~/img/pub/" + item.Imagen;
+                    <div class="d-flex justify-content-center">
+                        <img src="@photopathpub" asp-append-version="true"
+                             style="width: 550px;height: 550px;">
+                    </div>
+                }
+                <hr />
+                <h6 class="card-subtitle mb-2 text-center">Comentarios <i class="fa fa-comment-o" aria-hidden="true"></i></h6>
+
+
+                @{ var itemscom = Model.comentario.SelectMany(sublist => sublist.Where(com => com.Idpublicacion == item.Id)).ToList();}
+
+                @if (itemscom.Count() > 0)
+                {
+                        <hr />
+
+                }
+                <ul class="list-group list-group-flush">
+
+                    @foreach (var comentario2 in itemscom)
+                    {
+
+                        <li class="list-unstyled ml-3">
+                            @{ var photoprofileCom = "~/img/profile/" + (!string.IsNullOrEmpty(comentario2.Foto) ? comentario2.Foto : "profile-placeholder.png");}
+
+                            <img src="@photoprofileCom" asp-append-version="true"
+                                 class="rounded-circle z-depth-1-half mr-2" alt="example placeholder" style="width: 35px;height: 35px; "><div class="bg-light pl-2 pr-2 pt-1 pb-1" style="border-radius: 25px; display: inline-block;">
+                                <a class="text-primary font-weight-bold">@@@comentario2.Comentarista </a>@comentario2.Contenido.Trim()
+                            </div>
+                            <div id="accordion">
+                                @{ int count = 0;}
+                                @if (Model.Last != null)
+                                {
+                                    var last = Model.Last.FirstOrDefault(list => list.Idcomentario == comentario2.Id);
+
+
+                                    var repliess = Model.replies.Where(sublist => sublist.Any(item => item.Idcomentario == comentario2.Id));
+
+                                    <div class="ml-xl-5 "> <a href="" class="card-link mt-0" data-toggle="collapse" data-target="#collapse_@i,#collapseResp_@a" aria-expanded="false" aria-controls="collapse_@i"><small>Reply</small></a></div>
+                                    @foreach (var reply in repliess)
+                                    {
+                                        count = reply.Count();
+
+                                    }
+                                    @if (count > 0)
+                                    {<div class="ml-xl-5  mb-2 ">
+                                            <a href="" class="card-link mt-0" data-toggle="collapse" data-target="#collapseResp_@a,#collapse_@i" aria-expanded="false" aria-controls="#collapseResp_@a">
+                                                <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                                                <small>@@@last.Nameuser respondió · @count Respuestas </small>
+                                            </a>
+                                        </div>
+
+                                    }
+                                }
+                                <div id="collapseResp_@a" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
+
+                                    @if (Model.replies != null)
+                                    {
+                                        var replies = Model.replies.SelectMany(sublist => sublist.Where(item => item.Idcomentario == comentario2.Id)).ToList();
+
+                                        @foreach (var reply in replies)
+                                        {
+                                            var photopathreply = "~/img/profile/" + (!string.IsNullOrEmpty(reply.Photouser) ? reply.Photouser : "profile-placeholder.png");
+
+                                            <div class="row mt-2 mb-3 ml-2">
+                                                <div class="col ml-5">
+
+                                                    <img src="@photopathreply" asp-append-version="true"
+                                                         class="rounded-circle z-depth-1-half mr-2" alt="profile photo" style="width: 25px;height: 25px; "><div class="bg-light pl-2 pr-2 pt-1 pb-1" style="border-radius: 25px; display: inline-block;">
+                                                        <a class="text-primary font-weight-bold">@@@reply.Nameuser </a>@reply.Contenido.Trim()
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }a++;
+
+
+                                    }
+
+
+
+                                </div>
+
+                                <div id="collapse_@i" class="collapse" aria-labelledby="headingthree" data-parent="#accordion">
+
+
+                                    <form method="post" asp-action="reply" id="formreplies">
+
+                                        <div class="row text-right mt-3 mb-3">
+                                            <div class="col-sm-1 ml-5">
+                                                @{ var photoprofileComreply = "~/img/profile/" + (!string.IsNullOrEmpty(Model.Foto) ? Model.Foto : "profile-placeholder.png");}
+
+                                                <img src="@photoprofileComreply" asp-append-version="true"
+                                                     class="rounded-circle z-depth-1-half  mr-1" alt="example placeholder" style="width: 35px;height: 35px; ">
+                                            </div>
+                                            <div class="col-sm-7">
+                                                <textarea asp-for="newreply.Contenido" class=" form-control" style=" border-radius: 25px; width:100%; " placeholder="Escribe un respuesta..." rows="1" id="textshare"></textarea>
+                                                <input asp-for="newreply.Idcomentario" type="hidden" value="@comentario2.Id" />
+
+                                            </div>
+                                            <div class=" col-sm-1"><button type="submit" class="btn btn-primary btn-sm input-group-addon" onClick="return validar()">Reply</button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </li>
+
+                        i++;
+                    }
+
+
+
+                    <li class="list-group-item">
+                        <div class="mt-1 input-group">
+                            <form method="post" asp-action="Comentar">
+                                <label class="control-label"></label>
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        @{ var photoprofileComnew = "~/img/profile/" + (!string.IsNullOrEmpty(Model.Foto) ? Model.Foto : "profile-placeholder.png");}
+
+                                        <img src="@photoprofileComnew" asp-append-version="true"
+                                             class="rounded-circle z-depth-1-half  mr-1" alt="example placeholder" style="width: 35px;height: 35px; ">
+                                    </div>
+                                    <div class="ml-2 col-xl-8" style="width:30rem;">
+
+                                        <textarea asp-for="nuevoCom.Contenido" class="form-control" style=" border-radius: 25px;" placeholder="Escribe un comentario..." rows="1" id="textshare"></textarea>
+                                        <input asp-for="nuevoCom.Idpublicacion" type="hidden" value="@item.Id" />
+                                        <input asp-for="nuevoCom.Idusuario" type="hidden" value="@Model.idusuario" />
+
+
+                                    </div>
+                                    <div class=" col align-self-end" style="width:18%"><button type="submit" class="btn btn-primary btn-sm input-group-addon" onClick="return validar()">Comentar</button></div>
+                                </div>
+                            </form>
+                            <span class="text-danger"></span>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+}
+
+
+<script src='~/js/autosize.js'></script>
+<script src='~/js/site.js'></script>
+<script>
+    autosize(document.querySelectorAll('textarea'));
+</script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script src='~/js/site.js'></script>

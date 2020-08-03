@@ -1,0 +1,29 @@
+﻿@model ViewModels.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Activar Cuenta";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+
+
+}
+
+
+<link href="~/css/signin.css" rel="stylesheet">
+
+<br />
+<br />
+<br />
+
+<body class="text-center">
+
+        <img class="mb-4" src="~/img/logo.png" alt="" width="72" height="72">
+        <div class="alert alert-success" role="alert" style="display:@ViewBag.mostrar;">
+            <h4 class="alert-heading">Tu Cuenta esta Activa!</h4>
+            <p>Felicidades tu cuenta ha sido activada!</p>
+            <hr>
+            <p class="mb-0">Ya tienes acceso a la app pasa por el Login para dar inicico.</p>
+        </div>
+      
+        <a asp-action="Index" class=" btn btn-primary btn-lg btn-block">Iniciar Sesión</a>
+        <p class="mt-5 mb-3 text-muted">&copy; 2020-2020</p>
+    
+</body>

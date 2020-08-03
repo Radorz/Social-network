@@ -1,0 +1,14 @@
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csprojAssemblyReference.cache
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfoInputs.cache
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.AssemblyInfo.cs
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.deps.json
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\Database.dll
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\Database.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CopyComplete
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\dto.dll
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\dto.pdb

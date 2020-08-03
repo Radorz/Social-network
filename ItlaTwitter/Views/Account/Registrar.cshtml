@@ -1,0 +1,198 @@
+﻿@model ViewModels.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Registrar";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<link href="~/css/signin.css" rel="stylesheet">
+
+<script src="scripts/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+<style>
+    label {
+        cursor: pointer;
+    }
+
+    #upload-photo {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+</style>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+<br />
+<br />
+<div align="center">
+    <img class="mt-5 " src="~/img/logo.png" alt="" width="72" height="72">
+</div>
+<hr />
+<div class="card bg-light">
+    <div class="card-header bg-primary text-light text-center">
+        <a asp-action="Index" class="btn btn-success">Volver</a>
+        Crear Nuevo Usuario
+    </div>
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <form asp-action="Registrar" enctype="multipart/form-data" method="post">
+
+            <div>
+                <div class="d-flex justify-content-center">
+                    <img id="imagenPrevisualizacion" src="~/img/profile/profile-placeholder.png" asp-append-version="true"
+                         class="rounded-circle " style="width: 150px;height: 150px; ">
+                </div>
+                <p id="info" class="text-danger text-center">Esta imagen sera permanente y no podra ser modificada</p>
+
+                <div class="d-flex justify-content-center mt-2">
+                    <div>
+                        <label for="upload-photo" class="btn btn-outline-primary mr-3 rounded float-left">Añadir foto</label>
+                        <input type="file" name="photo" id="upload-photo" asp-for="photo" accept="image/*" />
+                        <button type="button" id="delete" class="btn btn-outline-danger rounded float-left">Quitar</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"> <span asp-validation-for="usuario" class="text-danger"></span></div>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input asp-for="usuario" class="form-control" placeholder="Usuario" type="text">
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input asp-for="Nombre" class="form-control" placeholder="Nombre" type="text">
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                <input asp-for="Apellido" class="form-control" placeholder="Apellido" type="text">
+
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                </div>
+                <input asp-for="Correo" class="form-control" placeholder="Email" type="email">
+
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Telefono" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                <select asp-for="indicetel" class="custom-select" style="max-width: 120px;">
+                    <option value="(809)" selected="">+1 (809)</option>
+                    <option value="(829)">+1 (829)</option>
+                    <option value="(849)">+1 (849)</option>
+                </select>
+                <input asp-for="Telefono" class="form-control" placeholder="Telefono" type="text">
+
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Contraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input asp-for="Contraseña" class="form-control" placeholder="Crear password" type="password">
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="RepeatContraseña" class="text-danger"></span>
+            </div>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input asp-for="RepeatContraseña" class="form-control" placeholder="Repetir password" type="password">
+
+
+            </div>
+            <input type="hidden" asp-for="Estado" value="Inactivo" />
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Crear Cuenta  </button>
+            </div>
+            <p class="text-center">Ya tienes una cuenta? <a asp-controller="Account" asp-action="Index">Inicia Sesión</a> </p>
+        </form>
+    </article>
+
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="foo" hidden>
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header alert-success">
+                <h5 class="modal-title" id="exampleModalLabel">Gracias Por Registrarte!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body alert-success">
+                <input type="text" name="names" id="names" value="@ViewBag.mostrar" hidden />
+                <p>Te hemos enviado un mail a tu correo electronico para que puedas activar tu cuenta.</p>
+                <hr>
+                <p class="mb-0">No tendras acceso a la App sin haber activado tu cuenta! Apurate.</p>
+            </div>
+            <div class="modal-footer alert-success">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a class="btn btn-info" asp-controller="Account" asp-action="Index">Inicia Sesión</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src='~/js/site.js'></script>
+<script>
+    const $seleccionArchivos = document.querySelector("#upload-photo"),
+        $imagenPrevisualizacion = document.querySelector("#imagenPrevisualizacion");
+    $delete = document.querySelector("#delete");
+
+
+
+    $seleccionArchivos.addEventListener("change", () => {
+        const archivos = $seleccionArchivos.files;
+        if (!archivos || !archivos.length) {
+            $imagenPrevisualizacion.src = "";
+
+            return;
+        }
+
+        const primerArchivo = archivos[0];
+        const objectURL = URL.createObjectURL(primerArchivo);
+        $imagenPrevisualizacion.src = objectURL;
+        $('#imagenPrevisualizacion').removeAttr('hidden');
+        $('#delete').removeAttr('hidden')
+    });
+    $delete.addEventListener("click", () => {
+        $seleccionArchivos.src = "";
+        $imagenPrevisualizacion.src = "https://flyinryanhawks.org/wp-content/uploads/2016/08/profile-placeholder.png";
+        $('#delete').attr("hidden", true)
+
+    });
+
+    $(document).ready(function () {
+        if ($("#names").val() == "block") {
+            $("#foo").trigger("click");
+        }
+    });
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

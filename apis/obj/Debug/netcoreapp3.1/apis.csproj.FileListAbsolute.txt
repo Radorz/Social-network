@@ -1,0 +1,4 @@
+C:\Users\luisi\source\repos\ItlaTwitter\apis\bin\Debug\netcoreapp3.1\apis.deps.json
+C:\Users\luisi\source\repos\ItlaTwitter\apis\bin\Debug\netcoreapp3.1\apis.dll
+C:\Users\luisi\source\repos\ItlaTwitter\apis\obj\Debug\netcoreapp3.1\apis.AssemblyInfoInputs.cache
+C:\Users\luisi\source\repos\ItlaTwitter\apis\obj\Debug\netcoreapp3.1\apis.AssemblyInfo.cs
