@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Database.Models;
-using dto;
+using DTOS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repository.RepositoryBase;

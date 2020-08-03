@@ -3628,6 +3628,19 @@
           "bin/placeholder/dto.dll": {}
         }
       },
+      "DTOS/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "5.2.7"
+        },
+        "compile": {
+          "bin/placeholder/DTOS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTOS.dll": {}
+        }
+      },
       "EmailHandler/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -3645,6 +3658,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "EmailHandler": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
@@ -3668,6 +3682,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "EmailHandler": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.6",
@@ -3687,6 +3702,7 @@
         "dependencies": {
           "AutoMapper": "10.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.NETCore.App": "2.2.8",
@@ -11138,6 +11154,11 @@
       "type": "project",
       "path": "../API/dto.csproj",
       "msbuildProject": "../API/dto.csproj"
+    },
+    "DTOS/1.0.0": {
+      "type": "project",
+      "path": "../DTOS/DTOS.csproj",
+      "msbuildProject": "../DTOS/DTOS.csproj"
     },
     "EmailHandler/1.0.0": {
       "type": "project",

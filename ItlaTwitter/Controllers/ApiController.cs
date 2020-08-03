@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using dto;
+using DTOS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Repository;
+using ViewModels.ViewModels;
 
 namespace ItlaTwitter.Controllers
 {
-    [Route("api/[controller]/{action}")]
+    [Route("api/{action}")]
     [ApiController]
     public class ApiController : ControllerBase
     {
@@ -28,34 +29,38 @@ namespace ItlaTwitter.Controllers
             _AmigosRepository = AmigosRepository;
 
         }
-        //public async Task<ActionResult<List<PublicacionesDTO>>> publicaciones(string username )
-        //{
-        //    try { 
-        //    var user = await _usermanager.FindByNameAsync(username);
-        //    if (user != null) {
-        //            var list = await _PublicacionesRepository.GetAllpubbyuserApi(user);
+        [HttpGet("{username}")]
+        public async Task<ActionResult<List<PublicacionesDTO>>> publicaciones(string username)
+        {
+            try
+            {
+                var user = await _usermanager.FindByNameAsync(username);
+                if (user != null)
+                {
+                    var list = await _PublicacionesRepository.GetAllpubbyuserApi(user);
 
-        //            if (list.Count >0 ) { 
-        //                return list;
-        //            }
-        //            else
-        //            {
-        //                return NoContent();
-        //            }
-        //        }
-        //    else
-        //    {
-        //        return NotFound();
-        //    }
-        //    }
-        //    catch
-        //    {
+                    if (list.Count > 0)
+                    {
+                        return list;
+                    }
+                    else
+                    {
+                        return NoContent();
+                    }
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch
+            {
 
-        //        return StatusCode(500);
-        //    }
+                return StatusCode(500);
+            }
 
-        //}
-        [HttpGet]
+        }
+        [HttpGet("{username}")]
         public async Task<ActionResult<List<userinfoDTO>>> Amigos(string username)
         {
             try
@@ -87,82 +92,40 @@ namespace ItlaTwitter.Controllers
             }
 
         }
-        //[HttpGet]
-        //public async Task<ActionResult<PublicacionesDTO>> PopularPub(string username)
-        //{
-        //    try
-        //    {
+        [HttpGet("{username}")]
+        public async Task<ActionResult<PublicacionesDTO>> PopularPub(string username)
+        {
+            try
+            {
 
-        //        var user = await _usermanager.FindByNameAsync(username);
-        //        if (user != null)
-        //        {
-        //            var list = await _PublicacionesRepository.PopularPub(user);
-        //            if (list != null)
-        //            {
-        //                return list;
-        //            }
-        //            else
-        //            {
-        //                return NoContent();
-        //            }
+                var user = await _usermanager.FindByNameAsync(username);
+                if (user != null)
+                {
+                    var list = await _PublicacionesRepository.PopularPub(user);
+                    if (list != null)
+                    {
+                        return list;
+                    }
+                    else
+                    {
+                        return NoContent();
+                    }
 
-        //        }
-        //        else
-        //        {
-        //            return NotFound();
-        //        }
-        //    }
-        //    catch
-        //    {
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch
+            {
 
-        //        return StatusCode(500);
-        //    }
+                return StatusCode(500);
+            }
 
-        //}
-        //[HttpPost]
-        //public async Task<ActionResult> Publicar(NewPubDTO vm)
-        //{
-        //    try
-        //    {
-        //            var user = await _usermanager.FindByNameAsync(vm.User);
-
-        //        if (user != null)
-        //        {
-        //            var resul = _signInManager.CheckPasswordSignInAsync(user, vm.Contraseña, false);
-
-        //            if (resul.Result.Succeeded)
-        //            {
-        //                vm.iduser = user.Id;
-        //                await _PublicacionesRepository.TweetApi(vm);
-        //                return NoContent();
-        //            }
-        //            else
-        //            {
-        //                return StatusCode(500);
-
-
-        //            }
-        //        }
-        //        else
-        //        {
-        //            return StatusCode(500);
-
-
-
-        //        }
-
-        //    }
-        //    catch
-        //    {
-
-        //        return StatusCode(500);
-        //    }
-
-
-        //}
-
+        }
         [HttpPost]
-        public async Task<ActionResult> Addfriend(addfriendDTO vm)
+        public async Task<ActionResult> Publicar(NewPubDTO vm)
         {
             try
             {
@@ -171,6 +134,48 @@ namespace ItlaTwitter.Controllers
                 if (user != null)
                 {
                     var resul = _signInManager.CheckPasswordSignInAsync(user, vm.Contraseña, false);
+
+                    if (resul.Result.Succeeded)
+                    {
+                        vm.iduser = user.Id;
+                        await _PublicacionesRepository.TweetApi(vm);
+                        return NoContent();
+                    }
+                    else
+                    {
+                        return StatusCode(500);
+
+
+                    }
+                }
+                else
+                {
+                    return StatusCode(500);
+
+
+
+                }
+
+            }
+            catch
+            {
+
+                return StatusCode(500);
+            }
+
+
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Addfriend(addfriendDTO vm)
+        {
+            try
+            {
+                var user = await _usermanager.FindByNameAsync(vm.usuario);
+
+                if (user != null)
+                {
+                    var resul = _signInManager.CheckPasswordSignInAsync(user, vm.contraseña, false);
 
                     if (resul.Result.Succeeded)
                     {

@@ -2275,6 +2275,19 @@
         "runtime": {
           "bin/placeholder/dto.dll": {}
         }
+      },
+      "DTOS/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "5.2.7"
+        },
+        "compile": {
+          "bin/placeholder/DTOS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DTOS.dll": {}
+        }
       }
     }
   },
@@ -7560,12 +7573,18 @@
       "type": "project",
       "path": "../API/dto.csproj",
       "msbuildProject": "../API/dto.csproj"
+    },
+    "DTOS/1.0.0": {
+      "type": "project",
+      "path": "../DTOS/DTOS.csproj",
+      "msbuildProject": "../DTOS/DTOS.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 10.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.0.1",
+      "DTOS >= 1.0.0",
       "Database >= 1.0.0",
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.8",
@@ -7610,6 +7629,9 @@
             },
             "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj": {
               "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj"
+            },
+            "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj": {
+              "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj"
             }
           }
         }

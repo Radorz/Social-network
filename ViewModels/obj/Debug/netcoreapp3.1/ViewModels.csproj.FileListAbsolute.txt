@@ -10,5 +10,5 @@ C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewM
 C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.pdb
 C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\obj\Debug\netcoreapp3.1\ViewModels.csproj.CoreCompileInputs.cache
-C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\dto.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\dto.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\DTOS.dll
+C:\Users\luisi\source\repos\ItlaTwitter\ViewModels\bin\Debug\netcoreapp3.1\DTOS.pdb

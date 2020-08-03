@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
-using dto;
+using DTOS;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Repository.Repository;
@@ -166,11 +166,11 @@ namespace APIv1.Controllers
         {
             try
             {
-                var user = await _usermanager.FindByNameAsync(vm.User);
+                var user = await _usermanager.FindByNameAsync(vm.usuario);
 
                 if (user != null)
                 {
-                    var resul = _signInManager.CheckPasswordSignInAsync(user, vm.Contraseña, false);
+                    var resul = _signInManager.CheckPasswordSignInAsync(user, vm.contraseña, false);
 
                     if (resul.Result.Succeeded)
                     {

@@ -166,6 +166,75 @@
         }
       }
     },
+    "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj",
+        "projectName": "DTOS",
+        "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj",
+        "packagesPath": "C:\\Users\\luisi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\luisi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\EmailHandler\\EmailHandler.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -269,6 +338,9 @@
               "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj": {
                 "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj"
               },
+              "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj": {
+                "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj"
+              },
               "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\EmailHandler\\EmailHandler.csproj": {
                 "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\EmailHandler\\EmailHandler.csproj"
               },
@@ -350,6 +422,9 @@
               },
               "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj": {
                 "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\Database\\Database.csproj"
+              },
+              "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj": {
+                "projectPath": "C:\\Users\\luisi\\source\\repos\\ItlaTwitter\\DTOS\\DTOS.csproj"
               }
             }
           }

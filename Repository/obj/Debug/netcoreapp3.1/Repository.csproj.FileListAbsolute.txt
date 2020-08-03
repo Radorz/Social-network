@@ -12,7 +12,7 @@ C:\Users\luisi\source\repos\ItlaTwitter\Repository\obj\Debug\netcoreapp3.1\Repos
 C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\ViewModels.dll
 C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\ViewModels.pdb
 C:\Users\luisi\source\repos\ItlaTwitter\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
-C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\dto.dll
 C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\EmailHandler.dll
-C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\dto.pdb
 C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\EmailHandler.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\DTOS.dll
+C:\Users\luisi\source\repos\ItlaTwitter\Repository\bin\Debug\netcoreapp3.1\DTOS.pdb

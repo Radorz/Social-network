@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ViewModels.ViewModels;
 using Database.Models;
-using dto;
+using DTOS;
 
 namespace ViewModels.Infraestructure.Automapper
 {

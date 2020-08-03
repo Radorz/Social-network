@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "ItlaTwitter/1.0.0": {
         "dependencies": {
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "EmailHandler": "1.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
@@ -2813,16 +2814,15 @@
           "Database.dll": {}
         }
       },
-      "dto/1.0.0": {
+      "DTOS/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNet.Mvc": "5.2.7",
-          "Microsoft.AspNetCore.Http.Features": "3.1.6"
+          "Microsoft.AspNet.Mvc": "5.2.7"
         },
         "runtime": {
-          "dto.dll": {}
+          "DTOS.dll": {}
         },
         "compile": {
-          "dto.dll": {}
+          "DTOS.dll": {}
         }
       },
       "EmailHandler/1.0.0": {
@@ -2838,6 +2838,7 @@
       },
       "Repository/1.0.0": {
         "dependencies": {
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "EmailHandler": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.6",
@@ -2855,6 +2856,7 @@
         "dependencies": {
           "AutoMapper": "10.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.0.1",
+          "DTOS": "1.0.0",
           "Database": "1.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.NETCore.App": "2.2.8",
@@ -4394,6 +4396,13 @@
       "WindowsBase/4.0.0.0": {
         "compile": {
           "WindowsBase.dll": {}
+        },
+        "compileOnly": true
+      },
+      "dto/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNet.Mvc": "5.2.7",
+          "Microsoft.AspNetCore.Http.Features": "3.1.6"
         },
         "compileOnly": true
       }
@@ -5971,7 +5980,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "dto/1.0.0": {
+    "DTOS/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -7263,6 +7272,11 @@
     },
     "WindowsBase/4.0.0.0": {
       "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "dto/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\API\dto.csproj" />
     <ProjectReference Include="..\Database\Database.csproj" />
+    <ProjectReference Include="..\DTOS\DTOS.csproj" />
     <ProjectReference Include="..\EmailHandler\EmailHandler.csproj" />
     <ProjectReference Include="..\ViewModels\ViewModels.csproj" />
   </ItemGroup>
