@@ -4,6 +4,6 @@ C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.csproj
 C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.AssemblyInfoInputs.cache
 C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.AssemblyInfo.cs
 C:\Users\luisi\source\repos\ItlaTwitter\DTOS\bin\Debug\netcoreapp3.1\DTOS.pdb
-C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.csproj.CoreCompileInputs.cache
 C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.dll
 C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\DTOS\obj\Debug\netcoreapp3.1\DTOS.csproj.CoreCompileInputs.cache

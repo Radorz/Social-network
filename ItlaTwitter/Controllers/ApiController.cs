@@ -11,7 +11,7 @@ using ViewModels.ViewModels;
 
 namespace ItlaTwitter.Controllers
 {
-    [Route("api/{action}")]
+    [Route("api")]
     [ApiController]
     public class ApiController : ControllerBase
     {
@@ -29,7 +29,8 @@ namespace ItlaTwitter.Controllers
             _AmigosRepository = AmigosRepository;
 
         }
-        [HttpGet("{username}")]
+        [Route("pubs/{username}")]
+        [HttpGet]
         public async Task<ActionResult<List<PublicacionesDTO>>> publicaciones(string username)
         {
             try
@@ -60,7 +61,9 @@ namespace ItlaTwitter.Controllers
             }
 
         }
-        [HttpGet("{username}")]
+        [Route("amigos/{username}")]
+
+        [HttpGet]
         public async Task<ActionResult<List<userinfoDTO>>> Amigos(string username)
         {
             try
@@ -92,7 +95,9 @@ namespace ItlaTwitter.Controllers
             }
 
         }
-        [HttpGet("{username}")]
+        [Route("popular/{username}")]
+
+        [HttpGet]
         public async Task<ActionResult<PublicacionesDTO>> PopularPub(string username)
         {
             try
@@ -124,6 +129,8 @@ namespace ItlaTwitter.Controllers
             }
 
         }
+        [Route("publicar")]
+
         [HttpPost]
         public async Task<ActionResult> Publicar(NewPubDTO vm)
         {
@@ -165,7 +172,7 @@ namespace ItlaTwitter.Controllers
 
 
         }
-
+        [Route("addfriend")]
         [HttpPost]
         public async Task<ActionResult> Addfriend(addfriendDTO vm)
         {

@@ -172,15 +172,6 @@ C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Repo
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\ViewModels.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Repository.pdb
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\ViewModels.pdb
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.Mvc.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
-C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -190,3 +181,5 @@ C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\obj\Debug\netcoreapp3.1\Itla
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\obj\Debug\netcoreapp3.1\ItlaTwitter.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\DTOS.dll
 C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\DTOS.pdb
+C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\web.config
+C:\Users\luisi\source\repos\ItlaTwitter\ItlaTwitter\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
